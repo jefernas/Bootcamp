@@ -19,7 +19,9 @@ public class App
 		String msjLleno = "¡¡Aprovecha tus 10 años de buena suerte!!";
     	String datos = JOptionPane.showInputDialog(null, mensaje);
 		
-		//Uso de la clase StringUtils de la librería commons lang importada con maven
+		/*Uso de la clase StringUtils de la librería commons lang importada con maven
+    	*Detecta con la función .isEmpty de la clase StringUtils si el texto (no) introducido está en blanco, es nulo o ha introducido un espacio
+    	*y muestra un mensaje en consecuencia*/
 		if(StringUtils.isEmpty(datos)) {
 			JOptionPane.showMessageDialog(null, msjVacio);
 		}else JOptionPane.showMessageDialog(null, msjLleno);
