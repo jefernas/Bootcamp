@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: product-service2
+  cloud:
+   config:
+   import-check: false
+   
+
+  
+eureka:
+  client:
+  serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
