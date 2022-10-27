@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;programacion_funcional_ejercicio1&apos; to &apos;taller1&apos;" description="Rename resource &apos;programacion_funcional_ejercicio1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/programacion_funcional_ejercicio1" name="taller1" stamp="1666854408521" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;webflux&apos;" deleteContents="false" description="Delete resource &apos;webflux&apos;" element1="/webflux" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1666869213719"/>
+</session>

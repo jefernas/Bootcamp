@@ -1,0 +1,5 @@
+package com.nttdata.webfluxappmicro;
+
+public class Person {
+
+}

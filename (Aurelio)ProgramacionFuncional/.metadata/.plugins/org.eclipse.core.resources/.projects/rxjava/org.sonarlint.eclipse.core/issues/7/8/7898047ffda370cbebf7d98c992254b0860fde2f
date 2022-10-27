@@ -1,0 +1,26 @@
+
+`
+java:S3740"/Provide the parametrized type for this generic.(Ğõ‘'8ÃëÑÆÁ0HcRMAJORZ
+CODE_SMELL
+`
+java:S3740!"/Provide the parametrized type for this generic.(Ğõ‘'8ÃëÑÆÁ0HdRMAJORZ
+CODE_SMELL
+o	java:S106"9Replace this use of System.out or System.err by a logger.(ïèÕèşÿÿÿÿ8ÃëÑÆÁ0HeRMAJORZ
+CODE_SMELL
+j	java:S106"9Replace this use of System.out or System.err by a logger.(ïÙõ8ÃëÑÆÁ0HfRMAJORZ
+CODE_SMELL
+o	java:S106"9Replace this use of System.out or System.err by a logger.(ò‚¦Üøÿÿÿÿ8ÃëÑÆÁ0HgRMAJORZ
+CODE_SMELL
+o	java:S106"9Replace this use of System.out or System.err by a logger.(€ùÆïûÿÿÿÿ8ÃëÑÆÁ0HhRMAJORZ
+CODE_SMELL
+j	java:S106$"9Replace this use of System.out or System.err by a logger.(àãù®8ÃëÑÆÁ0HiRMAJORZ
+CODE_SMELL
+j	java:S106)"9Replace this use of System.out or System.err by a logger.(ë¤ÓÙ8ÃëÑÆÁ0HjRMAJORZ
+CODE_SMELL
+j	java:S106-"9Replace this use of System.out or System.err by a logger.(£„ïé8ÃëÑÆÁ0HkRMAJORZ
+CODE_SMELL
+o	java:S1062"9Replace this use of System.out or System.err by a logger.(ú°£ÿúÿÿÿÿ8ÃëÑÆÁ0HlRMAJORZ
+CODE_SMELL
+P
+java:S1128"Remove this duplicated import.(–˜¼8ÃëÑÆÁ0HmRMINORZ
+CODE_SMELL
