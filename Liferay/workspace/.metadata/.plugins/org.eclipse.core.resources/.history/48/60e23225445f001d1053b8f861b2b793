@@ -1,0 +1,32 @@
+package jero.datosbotones.view;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand;
+
+import javax.portlet.Portlet;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+
+import org.osgi.service.component.annotations.Component;
+
+import DatosBotones.constants.DatosBotonesPortletKeys;
+
+@Component(
+		immediate = true,
+		property = {
+			
+			"javax.portlet.name=" + DatosBotonesPortletKeys.DATOSBOTONES,
+			"mvc.command.name=verdatos"
+		},
+		service = MVCRenderCommand.class
+	)
+
+public class DatosBotonesVerRenderCommand implements MVCRenderCommand {
+
+	@Override
+	public String render(RenderRequest renderRequest, RenderResponse renderResponse) throws PortletException {
+		// TODO Auto-generated method stub
+		return "/VerDatos.jsp";
+	}
+
+}

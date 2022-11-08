@@ -1,0 +1,12 @@
+<%@ include file="/init.jsp" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+
+
+<button class="btn btn-primary" type="button" >Editar Datos</button>
+
+<liferay-portlet:renderURL var="verDatosURL">
+	<liferay-portlet:param name="mvcPath" value="/VerDatos.jsp"/> 
+</liferay-portlet:renderURL>
+
+<button class="btn btn-primary" type="button"></button>
+<a href="<%= verDatosURL %>">Ver Datos</a>

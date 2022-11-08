@@ -1,0 +1,8 @@
+
+
+<portlet:renderURL var="volverURL">
+	<portlet:param name="mvcPath" value="/view.jsp"/> 
+</portlet:renderURL>
+
+
+<button onclick="location.href='<%= volverURL %>'" class="btn btn-primary" type="button">Volver</button>

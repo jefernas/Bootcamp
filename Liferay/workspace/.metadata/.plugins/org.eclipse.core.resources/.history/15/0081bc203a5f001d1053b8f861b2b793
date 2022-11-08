@@ -1,0 +1,8 @@
+<%@ include file="/init.jsp" %>
+
+<button onclick="location.ref='http://localhost:8080//DatosBotones/src/main/resources/META-INF/resources/VerDatos.jsp'" class="btn btn-primary" type="button">Ver Datos</button>
+<button class="btn btn-primary" type="button" href="<%= editURL %>">Editar Datos</button>
+
+<liferay-portlet:renderURL var="editURL">
+<liferay-portlet:param name="mvcPath" value="/EditarDatos.jsp"/> 
+</liferay-portlet:renderURL>

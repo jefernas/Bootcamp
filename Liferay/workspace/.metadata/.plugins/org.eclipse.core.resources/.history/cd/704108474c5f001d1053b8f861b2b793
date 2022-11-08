@@ -1,0 +1,31 @@
+<%@ include file="/init.jsp" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+
+<portlet:renderURL var="volverURL">
+	<portlet:param name="mvcPath" value="/view.jsp"/> 
+</portlet:renderURL>
+
+<form>
+<label for="dni">DNI:</label><br>
+  <input type="text" id="dni" name="dni"><br>
+  <label for="nombre">Nombre:</label><br>
+  <input type="text" id="nombre" name="nombre"><br>
+  <label for="apellido1">Primer apellido:</label><br>
+  <input type="text" id="apellido1" name="apellido1"><br>
+  <label for="apellido2">Segundo apellido:</label><br>
+  <input type="text" id="apellido2" name="apellido2"><br>
+  
+  <label for="start">Fecha de nacimiento:</label>
+	<input type="date" id="start" name="trip-start"
+       value="2022-11-08"
+       min="1900-01-01" max="2022-11-08">
+       
+  <input type="radio" id="sexo" name="sexo" value="hombre">
+  <label for="hombre">Hombre</label><br>
+  <input type="radio" id="sexo" name="sexo" value="mujer">
+  <label for="mujer">Mujer</label><br>
+  
+
+</form>
+
+<button onclick="location.href='<%= volverURL %>'" class="btn btn-primary" type="button">Volver</button>

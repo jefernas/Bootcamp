@@ -1,0 +1,4 @@
+<%@ include file="/init.jsp" %>
+
+<button onclick="location.ref='VerDatos.jsp'"class="btn btn-primary" type="button">Ver Datos</button>
+<button class="btn btn-primary" type="button">Editar Datos</button>

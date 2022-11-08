@@ -1,0 +1,6 @@
+<%@ include file="/init.jsp" %>
+
+<h1>Esto es el portlet que te dice: Hola Mundo!</h1>
+<h3>Creado por Jero</h3>
+<button class="btn btn-primary" type="button">Ver Datos</button>
+<button class="btn btn-primary" type="button">Editar Datos</button>

@@ -1,0 +1,4 @@
+Bundle-Name: DatosBotones
+Bundle-SymbolicName: DatosBotones
+Bundle-Version: 1.0.0
+Export-Package: DatosBotones.constants

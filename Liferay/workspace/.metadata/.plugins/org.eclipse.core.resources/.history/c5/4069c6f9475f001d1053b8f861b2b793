@@ -1,0 +1,11 @@
+<%@ include file="/init.jsp" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+
+
+<button class="btn btn-primary" type="button" >Editar Datos</button>
+
+<portlet:renderURL var="verDatosURL">
+	<portlet:param name="mvcPath" value="/VerDatos.jsp"/> 
+</portlet:renderURL>
+
+<button onclick="location.href='<%= verDatosURL %>'">Ver Datos</button>

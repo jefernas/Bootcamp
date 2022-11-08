@@ -1,0 +1,11 @@
+<%@ include file="/init.jsp" %>
+
+<button onclick="location.ref='http://localhost:8080//DatosBotones/src/main/resources/META-INF/resources/VerDatos.jsp'" class="btn btn-primary" type="button">Ver Datos</button>
+<button class="btn btn-primary" type="button" href="${verDatos}">Editar Datos</button>
+
+<portlet:renderURL var="verDatos" windowState="normal" 
+ portletMode="view">
+ <portlet:param name="mvcPath" value="/VerDatos.jsp" /> 
+</portlet:renderURL>
+ 
+<a href="${verDatos}"></a>

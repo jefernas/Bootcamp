@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-time="0" hostname="localhost" id="Liferay Digital Experience Platform 7.3.10 EP5(2) at localhost" name="Liferay Digital Experience Platform 7.3.10 EP5(2) at localhost" runtime-id="Liferay Digital Experience Platform 7.3.10 EP5(2)" server-type="com.liferay.ide.server.portal" server-type-id="com.liferay.ide.server.portal" start-timeout="900" stop-timeout="300" timestamp="4">
+    <list key="modules" value0="HolaMundoPortlet::com.liferay.ide.project.core.bundleFactory:HolaMundoPortlet::liferay.bundle::1.0" value1="DatosBotones::com.liferay.ide.project.core.bundleFactory:DatosBotones::liferay.bundle::1.0"/>
+  </server>
+</servers>
