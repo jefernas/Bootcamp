@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.training.personas.model.Personas">
+		<field name="uuid" type="String" />
+		<field name="dni" type="String" />
+		<field name="nombre" type="String" />
+		<field name="apellido1" type="String" />
+		<field name="apellido2" type="String" />
+		<field name="nacimiento" type="Date" />
+		<field name="sexo" type="String" />
+		<field name="altura" type="double" />
+		<field name="trabaja" type="boolean" />
+	</model>
+</model-hints>

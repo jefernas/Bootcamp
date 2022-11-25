@@ -1,0 +1,52 @@
+<%@ include file="/view.jsp"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+
+<form action="view.jsp" method="POST">
+
+	<table>
+	<tr>
+	<td>DNI: </td>
+	<td><input type="text" name="dni"  /></td>
+	</tr>
+	
+	<tr>
+	<td>Nombre: </td>
+	<td><input type="text" name="nombre"  /></td>
+	</tr>
+	
+	<tr>
+	<td>Primer apellido: </td>
+	<td><input type="text" name="apellido1"  /></td>
+	</tr>
+	
+	<tr>
+	<td>Segundo apellido: </td>
+	<td><input type="text" name="apellido2"  /></td>
+	</tr>
+	
+	<tr>
+	<td>Sexo: </td>
+	<td><input type="text" name="sexo"  /></td>
+	</tr>
+	
+	<tr>
+	<td>Altura: </td>
+	<td><input type="text" name="altura"  /></td>
+	</tr>
+	
+	<tr>
+	<td>Trabaja: </td>
+	<td><input type="checkbox" name="trabaja"  /></td>
+	</tr>
+	
+	<tr>
+	<td>Fecha de nacimiento: </td>
+	<td><input type="date" name="nacimiento"  /></td>
+	</tr>
+	</table>
+	
+	 <input type="submit" value="Enviar">
+
+</form>

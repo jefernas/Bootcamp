@@ -1,0 +1,17 @@
+<%@ include file="../init.jsp"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+
+<form action="main.jsp" method="POST">
+	<input type="text" name="dni"  />
+	<input type="text" name="nombre"  />
+	<input type="text" name="apellido1"  />
+	<input type="text" name="apellido2"  />
+	<input type="text" name="sexo"  />
+	<input type="number" name="altura"  />
+	<input type="checked" name="trabaja"  />
+	<input type="date" name="nacimiento"  />
+	 <input type="submit" value="Enviar">
+
+</form>

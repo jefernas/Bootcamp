@@ -1,0 +1,6 @@
+Bundle-Name: gestion-personas
+Bundle-SymbolicName: com.liferay.training.gestion.personas
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.training.gestion.personas.constants
+	
+-check: EXPORTS

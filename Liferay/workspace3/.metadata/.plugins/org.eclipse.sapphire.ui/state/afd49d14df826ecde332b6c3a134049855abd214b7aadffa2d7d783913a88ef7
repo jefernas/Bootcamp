@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailsEditorPageState>
+    <ContentOutlineState>
+        <Ratio>0.2982005141388175</Ratio>
+        <Root>
+            <Children>
+                <MasterDetailsNodeState>
+                    <Label>Service Builder</Label>
+                    <Expanded>true</Expanded>
+                    <Children>
+                        <MasterDetailsNodeState>
+                            <Label>Entities</Label>
+                            <Expanded>true</Expanded>
+                            <Children>
+                                <MasterDetailsNodeState>
+                                    <Label>Personas</Label>
+                                    <Expanded>true</Expanded>
+                                    <Children>
+                                        <MasterDetailsNodeState>
+                                            <Label>Columns</Label>
+                                            <Expanded>true</Expanded>
+                                            <Children>
+                                                <MasterDetailsNodeState>
+                                                    <Label>apellido2</Label>
+                                                    <Expanded>true</Expanded>
+                                                    <Selected>true</Selected>
+                                                </MasterDetailsNodeState>
+                                            </Children>
+                                        </MasterDetailsNodeState>
+                                    </Children>
+                                </MasterDetailsNodeState>
+                            </Children>
+                        </MasterDetailsNodeState>
+                    </Children>
+                </MasterDetailsNodeState>
+            </Children>
+        </Root>
+    </ContentOutlineState>
+</MasterDetailsEditorPageState>

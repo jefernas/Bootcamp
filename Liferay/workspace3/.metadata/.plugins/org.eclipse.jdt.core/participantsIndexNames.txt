@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\dev\liferay\devstudio\workspace3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4063090525.index
+\gestion-personas\src\main\java
+C:\dev\liferay\devstudio\workspace3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1297702622.index
+\gestion-personas\src\main\java

@@ -1,0 +1,5 @@
+package com.liferay.training.gestion.personas.portlet.action;
+
+public class ManageRenderCommand {
+
+}

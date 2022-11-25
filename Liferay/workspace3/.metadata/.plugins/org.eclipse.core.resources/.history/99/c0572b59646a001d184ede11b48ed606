@@ -1,0 +1,112 @@
+<%@ include file="/init.jsp"%>
+
+<p>
+	<b><liferay-ui:message key="personas.caption" /></b>
+</p>
+
+<liferay-portlet:renderURL var= "manageURL">
+	<liferay-portlet:param name="mvcRenderCommandName" value="manage"/>
+</liferay-portlet:renderURL>
+<liferay-portlet:renderURL var= "updatePersonasActionURL">
+	<liferay-portlet:param name="mvcRenderCommandName" value="updatePersonas"/>
+</liferay-portlet:renderURL>
+
+
+
+<div class="container-fluid-1280">
+	<h1>
+		<liferay-ui:message key="Personas" />
+	</h1>
+	
+	<%-- Clay management toolbar. --%>
+	<%-- <clay:management-toolbar disabled="${personasCount eq 0}"--%>
+	<clay:management-toolbar disabled= "false" 
+		displayContext="${personasManagementToolbarDisplayContext}"
+		itemsTotal="${personasCount}" 
+		searchContainerId="personasEntries"
+		selectable="false" 
+		
+	
+   
+		/>
+		
+		
+	<%-- Search container. --%>
+	<liferay-ui:search-container emptyResultsMessage="No hay personas que mostrar"
+		id="personasEntries" iteratorURL="${portletURL}"
+		total="${personasCount}">
+		<liferay-ui:search-container-results results="${personas}" />
+		
+		<liferay-ui:search-container-row
+			className="com.liferay.training.personas.model.Personas"
+			modelVar="entry">
+			<%@ include file="/personas/entry_search_columns.jspf"%>
+		</liferay-ui:search-container-row>
+
+		<%-- Iterator / Paging --%>
+		<liferay-ui:search-iterator
+			displayStyle="${personasManagementToolbarDisplayContext.getDisplayStyle()}"
+			markupView="lexicon" />
+			
+	</liferay-ui:search-container>
+	
+
+	<aui:a href="<%= manageURL %>"><button>Manage</button><br><br></aui:a>
+</div>
+
+<portlet:defineObjects />
+ 
+<%  List<Personas> personasList = (List<Personas>)request.getAttribute("personasList"); %>
+<portlet:renderURL var="addPersonasRenderURL">
+    <portlet:param name="mvcPath" value="/add-personas.jsp"/>
+</portlet:renderURL>
+ 
+<div class="mb-5">
+    <a href="<%= addPersonasRenderURL %>" class="btn  btn-primary btn-default">
+        <i class="glyphicon glyphicon-plus"></i> Add Personas
+    </a>
+</div>
+<table class="table table-striped">
+   
+    <c:forEach items="${personasList}" var="personas">  
+    
+        <portlet:renderURL var="updatePersonasRenderURL">
+            <portlet:param name="mvcPath" value="/update-personas.jsp"/>
+            <portlet:param name="dni" value="${personas.dni}"/>
+            <portlet:param name="nombre" value="${personas.nombre}"/>
+            <portlet:param name="apellido1" value="${personas.apellido1}"/>
+            <portlet:param name="apellido23" value="${personas.apellido2}"/>
+            <portlet:param name="sexo" value="${personas.sexo}"/>
+            <portlet:param name="altura" value="${personas.altura}"/>
+            <portlet:param name="trabaja" value="${personas.trabaja}"/>
+            <portlet:param name="nacimiento" value="${personas.nacimiento}"/>
+        </portlet:renderURL>
+        
+        <portlet:actionURL name="deletePersonas" var="deletePersonasActionURL">
+            <portlet:param name="dni" value="${personas.getPersonasDni()}"/>
+        </portlet:actionURL>
+                
+        <tr> 
+            <td>${personas.getDni()}</td>
+            <td>${personas.getNombre()}</td>
+            <td>${personas.getApellido1()}</td>
+            <td>${personas.getApellido2()}</td>
+            <td>${student.getSexo()}</td>
+            <td>${student.getAltura()}</td>
+            <td>${student.getTrabaja()}</td>
+            <td>${student.getNacimiento()}</td>
+            <td class="text-center" style="width: 50px">
+                <a href="<%=updatePersonasRenderURL%>" class="btn  btn-primary btn-default btn-sm px-2 py-1" >
+                <i class ="glyphicon glyphicon-edit"></i>
+                </a>
+            </td> 
+            <td class="text-center" style="width:50px">
+                <a href="<%=deletePersonasActionURL%>" 
+                    class="btn  btn-primary btn-default btn-sm px-2 py-1"
+                    onclick="return confirm('Are you sure you want to delete this item?');"> 
+                    <i class ="glyphicon glyphicon-remove"></i>
+                </a>
+            </td>                                     
+         </tr>
+    </c:forEach>
+</table>

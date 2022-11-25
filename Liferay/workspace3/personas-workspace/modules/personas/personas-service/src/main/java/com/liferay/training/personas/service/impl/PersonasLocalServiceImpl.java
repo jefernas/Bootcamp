@@ -1,0 +1,122 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package com.liferay.training.personas.service.impl;
+
+import com.liferay.portal.aop.AopService;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.training.personas.model.Personas;
+import com.liferay.training.personas.service.base.PersonasLocalServiceBaseImpl;
+
+import java.util.Date;
+import java.util.List;
+
+import org.osgi.service.component.annotations.Component;
+
+/**
+ * The implementation of the personas local service.
+ *
+ * <p>
+ * All custom service methods should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the <code>com.liferay.training.personas.service.PersonasLocalService</code> interface.
+ *
+ * <p>
+ * This is a local service. Methods of this service will not have security checks based on the propagated JAAS credentials because this service can only be accessed from within the same VM.
+ * </p>
+ *
+ * @author Brian Wing Shun Chan
+ * @see PersonasLocalServiceBaseImpl
+ */
+@Component(
+	property = "model.class.name=com.liferay.training.personas.model.Personas",
+	service = AopService.class
+)
+public class PersonasLocalServiceImpl extends PersonasLocalServiceBaseImpl {
+
+	
+	//Implementacion de los metodos CRUD
+	
+			//CREATE
+			
+			@Override
+			
+			public Personas addPersonas(String dni, String nombre, String apellido1, String apellido2, Date nacimiento, String sexo, double altura, boolean trabaja) {
+				Personas persona = super.createPersonas(dni);
+				persona.setNombre(nombre);
+				persona.setApellido1(apellido1);
+				persona.setApellido2(apellido2);
+				persona.setNacimiento(nacimiento);
+				persona.setSexo(sexo);
+				persona.setAltura(altura);
+				persona.setTrabaja(trabaja);
+				return super.addPersonas(persona);
+			}
+			//READ (FINDERS)
+			@Override
+			public List<Personas> findByNacimiento(Date nacimiento){
+				return personasPersistence.findByNacimiento(nacimiento);
+			}
+			@Override
+			public List<Personas> findByNacimiento(Date nacimiento,int start, int end){
+				return personasPersistence.findByNacimiento(nacimiento, start, end);
+			}
+			@Override
+			public int countByNacimiento(Date nacimiento) {
+				return personasPersistence.countByNacimiento(nacimiento);
+			}
+			@Override
+			public List<Personas> findBySexo(String sexo){
+				return personasPersistence.findBySexo(sexo);
+			}
+			@Override
+			public List<Personas> findBySexo(String sexo,int start, int end){
+				return personasPersistence.findBySexo(sexo, start, end);
+			}
+			@Override
+			public int countBySexo(String sexo) {
+				return personasPersistence.countBySexo(sexo);
+			}
+			@Override
+			public List<Personas> findByTrabaja(boolean trabaja){
+				return personasPersistence.findByTrabaja(trabaja);
+			}
+			@Override
+			public List<Personas> findByTrabaja(boolean trabaja,int start, int end){
+				return personasPersistence.findByTrabaja(trabaja, start, end);
+			}
+			@Override
+			public int countByTrabaja(boolean trabaja) {
+				return personasPersistence.countByTrabaja(trabaja);
+			}
+			
+			//UPDATE
+			@Override
+			public Personas updatePersonas(String dni, String nombre, String apellido1, String apellido2, Date nacimiento, String sexo, double altura, boolean trabaja) throws PortalException{
+				Personas persona = getPersonas(dni);
+				persona.setNombre(nombre);
+				persona.setApellido1(apellido1);
+				persona.setApellido2(apellido2);
+				persona.setNacimiento(nacimiento);
+				persona.setSexo(sexo);
+				persona.setAltura(altura);
+				persona.setTrabaja(trabaja);
+				return updatePersonas(persona);
+			}
+			
+			//DELETE
+			@Override
+			public Personas deletePersonas(String dni) throws PortalException {
+				Personas persona = getPersonas(dni);
+				return personasPersistence.remove(persona);
+			}
+}

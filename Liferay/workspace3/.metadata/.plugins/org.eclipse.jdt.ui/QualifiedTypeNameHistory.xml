@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.exception.PortalException"/>
+<fullyQualifiedTypeName name="org.osgi.service.component.annotations.Component"/>
+<fullyQualifiedTypeName name="com.liferay.training.personas.service.PersonasService"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand"/>
+<fullyQualifiedTypeName name="com.liferay.frontend.taglib.clay.servlet.taglib.display.context.BaseManagementToolbarDisplayContext"/>
+<fullyQualifiedTypeName name="com.liferay.training.personas.model.Personas"/>
+<fullyQualifiedTypeName name="com.liferay.training.gestion.personas.constants.MVCCommandNames"/>
+<fullyQualifiedTypeName name="com.liferay.training.gestion.personas.constants.PersonasPortletKeys"/>
+<fullyQualifiedTypeName name="javax.portlet.RenderRequest"/>
+<fullyQualifiedTypeName name="javax.portlet.RenderResponse"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="javax.portlet.PortletException"/>
+<fullyQualifiedTypeName name="com.liferay.training.gestion.pesonas.display.context.PersonasManagementToolbarDisplayContext"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.log.Log"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.log.LogFactoryUtil"/>
+<fullyQualifiedTypeName name="org.osgi.service.component.annotations.Reference"/>
+<fullyQualifiedTypeName name="com.liferay.counter.kernel.service.CounterLocalService"/>
+<fullyQualifiedTypeName name="com.liferay.training.personas.service.PersonasLocalService"/>
+<fullyQualifiedTypeName name="javax.portlet.ProcessAction"/>
+<fullyQualifiedTypeName name="javax.portlet.ActionRequest"/>
+<fullyQualifiedTypeName name="javax.portlet.ActionResponse"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.GetterUtil"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,10 @@
+Bundle-Name: personas-api
+Bundle-SymbolicName: com.liferay.training.personas.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.training.personas.exception,\
+	com.liferay.training.personas.model,\
+	com.liferay.training.personas.service,\
+	com.liferay.training.personas.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../personas-service/service.xml

@@ -1,0 +1,12 @@
+#
+#Thu Nov 24 17:11:55 CET 2022
+classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n
+buildScriptPath=build.gradle
+linkedResources=
+subprojectPaths=modules;modules/gestion-personas;modules/personas;modules/personas/personas-api;modules/personas/personas-service
+managedNatures=org.eclipse.jdt.core.javanature
+hasAutoBuildTasks=false
+gradleVersion=5.6.4
+buildDir=build
+managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+derivedResources=.gradle;build;modules/build;modules/gestion-personas/build;modules/personas/build;modules/personas/personas-api/build;modules/personas/personas-service/build

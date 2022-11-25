@@ -1,0 +1,93 @@
+<%@ include file="../init.jsp"%>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
+<%@ page import="com.liferay.portal.kernel.util.*"%>  
+<%@ page import="com.liferay.portal.kernel.language.*"%>
+<%@ page import="java.util.*"%>  
+<%@ page import="com.liferay.training.gestion.personas.constants.*"%>
+
+
+
+<%-- Generate personas view URL. --%>
+<portlet:renderURL var="viewPersonasURL">
+	<portlet:param name="mvcRenderCommandName"
+		value="<%=MVCCommandNames.VIEW_PERSONAS %>"  />
+	<portlet:param name="redirect" value="${currentURL}" />
+	<portlet:param name="dni" value="${entry.dni}" />
+</portlet:renderURL>
+<!--   -->
+<c:choose>
+	<%-- Descriptive (list) view --%>
+	<c:when test='${personasManagementToolbarDisplayContext.getDisplayStyle().equals("descriptive")}'>
+		<%-- User --%>
+		<liferay-ui:search-container-column-user showDetails="<%=false%>"  name="<%=entry.getNombre()%>" />
+		<liferay-ui:search-container-column-text colspan="<%=2%>">
+	
+			<h4>
+				<aui:a href="${viewPersonastURL}">
+
+</aui:a>
+			</h4>
+		</liferay-ui:search-container-column-text>
+		<liferay-ui:search-container-column-jsp
+			path="/personas/entry_actions.jsp" />
+	</c:when>
+	
+	
+	<%-- Card view --%>
+	<c:when test='${personasManagementToolbarDisplayContext.getDisplayStyle().equals("icon")}'>
+		
+		<%--row.setCssClass("lfr-asset-item");--%>
+		<liferay-ui:search-container-column-text>
+			
+			<%-- Vertical card. --%>
+			<liferay-frontend:icon-vertical-card
+				actionJsp="/personas/entry_actions.jsp"
+				actionJspServletContext="<%= application %>" icon="cards2"
+				resultRow="${row}" title="${entry.title}" url="${viewPesonasURL}">
+				
+			<liferay-frontend:vertical-card-sticker-bottom>
+					<liferay-ui:user-portrait cssClass="sticker sticker-bottom"
+						userName="${entry.nombre}" />
+			</liferay-frontend:vertical-card-sticker-bottom>
+				
+				<liferay-frontend:vertical-card-footer>
+					<div class="truncate-text">
+						<%-- Strip HTML --%>
+						<%=HtmlUtil.stripHtml(entry.getDescription())  %>
+					</div>
+				</liferay-frontend:vertical-card-footer>
+		</liferay-frontend:icon-vertical-card>
+		</liferay-ui:search-container-column-text>
+	</c:when>
+
+<%-- Table view --%>
+						<c:otherwise>
+							<liferay-ui:search-container-column-text
+								href="${viewPersonasURL}" name="nombre"
+								value="<%= entry.getNombre() %>" />
+								<liferay-ui:search-container-column-text
+								href="${viewPersonasURL}" name="apellido1"
+								value="<%= entry.getApellido1() %>" />
+								<liferay-ui:search-container-column-text
+								href="${viewPersonasURL}" name="pellido2"
+								value="<%= entry.getApellido2() %>" />
+								<liferay-ui:search-container-column-text
+								href="${viewPersonasURL}" name="sexo"
+								value="<%= entry.getSexo() %>" />
+								<liferay-ui:search-container-column-text
+								href="${viewPersonasURL}" name="nacimiento"
+								value="<%= entry.getNacimiento() %>" />
+								<liferay-ui:search-container-column-text
+								href="${viewPersonasURL}" name="altura"
+								value="<%= entry.getAltura() %>" />
+								<liferay-ui:search-container-column-text
+								href="${viewPersonasURL}" name="trabaja"
+								value="<%= entry.getTrabaja() %>" />
+								
+								
+						
+							
+							<liferay-ui:search-container-column-jsp name="actions"
+								path="/personas/entry_actions.jsp" />
+						</c:otherwise>
+</c:choose>

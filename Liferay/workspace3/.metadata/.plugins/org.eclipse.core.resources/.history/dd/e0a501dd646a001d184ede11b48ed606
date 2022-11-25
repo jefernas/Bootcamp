@@ -1,0 +1,28 @@
+<%@ include file="/view.jsp"%>
+<portlet:defineObjects/>
+ 
+<portlet:actionURL name="updatePersonas2" var="updatePersonas2ActionURL"/>
+ 
+<aui:form action="<%=updatePersonas2ActionURL%>" name="personasForm" method="POST"/>
+ 
+<%
+    String dni = renderRequest.getParameter("dni");
+    String nombre = renderRequest.getParameter("nombre");
+    String apellido1 = renderRequest.getParameter("apellido1");
+    String apellido2 = renderRequest.getParameter("apellido2");
+    String sexo = renderRequest.getParameter("sexo");
+    String altura = renderRequest.getParameter("altura");
+    String trabaja = renderRequest.getParameter("trabaja");
+    String nacimiento = renderRequest.getParameter("nacimiento");
+%>
+<aui:form action="<%= updatePersonas2ActionURL %>" method="post" >
+    <aui:input name="dni" type="text" value=""/>
+    <aui:input name="nombre" type="text" value=""/>
+    <aui:input name="apellido1" type="text" value=""/>
+    <aui:input name="apellido2" type="text" value="" />
+    <aui:input name="sexo" type="text" value="" />
+    <aui:input name="altura" type="number" value=""/> 
+    <aui:input name="trabaja" type="text" value=""/>
+    <aui:input name="nacimiento" type="text" value=""/>
+    <aui:input type="submit" value="Update" name="update"></aui:input>
+</aui:form>
