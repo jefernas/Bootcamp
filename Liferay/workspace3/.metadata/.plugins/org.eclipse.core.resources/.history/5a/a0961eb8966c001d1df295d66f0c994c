@@ -14,7 +14,6 @@
 
 package com.liferay.training.personas.service.impl;
 
-
 import com.liferay.portal.aop.AopService;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.training.personas.model.Personas;
@@ -22,8 +21,7 @@ import com.liferay.training.personas.service.base.PersonasLocalServiceBaseImpl;
 
 import java.util.Date;
 import java.util.List;
-import org.osgi.annotation.*;
-import org.osgi.annotation.versioning.ProviderType;
+
 import org.osgi.service.component.annotations.Component;
 
 /**
@@ -43,8 +41,6 @@ import org.osgi.service.component.annotations.Component;
 	property = "model.class.name=com.liferay.training.personas.model.Personas",
 	service = AopService.class
 )
-
-@ProviderType
 public class PersonasLocalServiceImpl extends PersonasLocalServiceBaseImpl {
 
 	
@@ -118,7 +114,6 @@ public class PersonasLocalServiceImpl extends PersonasLocalServiceBaseImpl {
 			}
 			
 			//DELETE
-			
 			@Override
 			public Personas deletePersonas(String dni) throws PortalException {
 				Personas persona = getPersonas(dni);

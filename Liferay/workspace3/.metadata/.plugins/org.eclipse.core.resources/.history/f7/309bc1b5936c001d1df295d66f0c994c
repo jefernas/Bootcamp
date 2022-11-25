@@ -8,6 +8,10 @@
 	<liferay-portlet:param name="mvcRenderCommandName" value="manage"/>
 </liferay-portlet:renderURL>
 
+
+
+
+
 <div class="container-fluid-1280">
 	<h1>
 		<liferay-ui:message key="Personas" />
@@ -20,6 +24,8 @@
 		itemsTotal="${personasCount}" 
 		searchContainerId="personasEntries"
 		selectable="true" 
+		
+	
    
 		/>
 		
@@ -42,6 +48,7 @@
 			markupView="lexicon" />
 			
 	</liferay-ui:search-container>
+	
 
 	<aui:a href="<%= manageURL %>"><button>Manage</button><br><br></aui:a>
 </div>

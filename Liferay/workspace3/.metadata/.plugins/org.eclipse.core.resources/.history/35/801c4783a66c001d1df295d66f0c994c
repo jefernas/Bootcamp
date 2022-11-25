@@ -4,7 +4,7 @@ public class MVCCommandNames {
 
 	public static final String ADD_PERSONAS = "/personas/personas/add";
 	public static final String DELETE_PERSONAS = "/personas/personas/delete";
-	public static final String EDIT_PERSONAS = "/personas/manage";
+	public static final String EDIT_PERSONAS = "/personas/update-personas";
 	public static final String VIEW_PERSONAS = "/personas/personas/view_view";
 	
 	// These are used for the optional exercise "Implement Submissions".

@@ -22,7 +22,7 @@ import com.liferay.training.personas.service.base.PersonasLocalServiceBaseImpl;
 
 import java.util.Date;
 import java.util.List;
-import org.osgi.annotation.*;
+
 import org.osgi.annotation.versioning.ProviderType;
 import org.osgi.service.component.annotations.Component;
 

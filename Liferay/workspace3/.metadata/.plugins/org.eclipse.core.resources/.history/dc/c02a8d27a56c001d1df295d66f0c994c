@@ -51,22 +51,15 @@ public class AddPersonasMVCActionCommand extends BaseMVCActionCommand{
 				 Personas.class.getName(), actionRequest);
 				 // Get parameters from the request.
 				 String dni = ParamUtil.getString(actionRequest, "dni", StringPool.BLANK);
-				 String nombre = ParamUtil.getString(actionRequest, "nombre", StringPool.BLANK);
-				 String apellido1 = ParamUtil.getString(actionRequest, "apellido1", StringPool.BLANK);
-				 String apellido2 = ParamUtil.getString(actionRequest, "apellido2", StringPool.BLANK);
-				 Date nacimiento = ParamUtil.getDate(actionRequest, "nacimiento", null);  //.getString(actionRequest, "dni", StringPool.BLANK);
-				 String sexo = ParamUtil.getString(actionRequest, "sexo", StringPool.BLANK);
-				 double altura = ParamUtil.getDouble(actionRequest, "altura");
-				 boolean trabaja = ParamUtil.getBoolean(actionRequest, "trabaja");
-				 
-				 try {				 // Call the service to add a new personas.
+				 /* try {				 // Call the service to add a new assignment.
 
-				_personasService.addPersonas(dni, nombre, apellido1, apellido2, nacimiento, sexo,altura, trabaja);
+				_personasService.addPersonas(
+				 themeDisplay.getScopeGroupId(), dni, description, dueDate, se sendRedirect(actionRequest, actionResponse);
 				 }catch (Exception e) {
 
 				 e.printStackTrace();
 				 
-				 }
+				 }*/
 				
 				 
 	
